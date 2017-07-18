@@ -9,6 +9,13 @@ permalink: /about/
 <br/>
 My name is Jonah Philion. I'm a rising senior at harvard. This is an experimental website I made to practice frontend design and also to practice presenting material I've worked on to the world.
 
+
+
+
+
+
+
+
 <br/>
 <hr/>
 <br/>
