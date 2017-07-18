@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /poetry/
-title: poetry
-description: Showcase your writing, short stories, or poems. Replace this text with your description.
+permalink: /physics/
+title: physics
+description:  physics research documentation
 ---
 
 <ul class="post-list">
