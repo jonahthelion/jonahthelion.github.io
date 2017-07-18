@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /physics/
+permalink: poetry/
 title: physics
 description:  physics research documentation
 ---
