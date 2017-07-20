@@ -2,7 +2,7 @@
 layout: page
 permalink: music/
 title: music
-description:  physics research documentation
+description: sound projects
 ---
 
 <ul class="post-list">
