@@ -25,5 +25,8 @@ collections:
   physics:
     output: true
     permalink: /physics/:path/
+  music:
+    output: true
+    permalink: /music/:path/
 
 
