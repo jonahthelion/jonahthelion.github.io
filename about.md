@@ -4,7 +4,7 @@ title: about
 permalink: /about/
 ---
 
-<img class="col one right" src="/img/hide_and_seek_square.jpg">
+<img class="col one right" src="/img/hide_and_seek_square_cropped.jpg">
 
 <br/>
 My name is Jonah Philion. I'm a rising senior at harvard and new england conservatory. This is an experimental website I made to to become more familiar with frontend design and also to practice presenting to the world material I’ve worked on.
