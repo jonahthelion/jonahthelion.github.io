@@ -1,75 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Some Music</title>
+    <title>Music</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/the-big-picture.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-      <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
         </div>
-      </div>
-    </nav>
+        <!-- /#sidebar-wrapper -->
 
-    <!-- Page Content -->
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h1 class="mt-5">Some Music</h1>
-<!--             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptates rerum eveniet sapiente repellat esse, doloremque quod recusandae deleniti nostrum assumenda vel beatae sed aut modi nesciunt porro quisquam voluptatem.</p> -->
-            <div class="col-sm-4 col-sm-offset-4 embed-responsive embed-responsive-4by3">
-                <audio controls class="embed-responsive-item">
-                    <source src="music/intoYou.mp3">
-                </audio>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1>Some Music</h1>
+
+                <ul class="nav nav-tabs">
+                  <li class="nav-item active">
+                    <a data-toggle="tab" class="nav-link active" href="#first">Reshearsal 1</a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#second">Rehearsal 2</a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" class="nav-link" href="#third">Rehearsal 3</a>
+                  </li>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- first session -->
+                    <div id="first" class="tab-pane fade-in active">
+                        <div class="music-session">
+                            <h5>1/15/2018 - Mario Febrizio, Seajun Kwon, Aditya Raguram, Ryan Park-Chan, Jonah Philion</h5>
+                            <div class="card card-body">
+                                <p>Free For All 1</p>
+                                <audio src="1/1-freeForAll1.m4a" controls>
+                            </div>
+                            <div class="card card-body">
+                                <p>Free For All 2</p>
+                                <audio src="1/1-freeForAll2.m4a" controls>
+                            </div>
+                            <div class="card card-body">
+                                <p>Darn That Dream</p>
+                                <audio src="1/1-darnThatDream.m4a" controls>
+                            </div>
+                            <div class="card card-body">
+                                <p>Blue Train</p>
+                                <audio src="1/1-blueTrain.m4a" controls>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- second session -->
+                    <div id="second" class="tab-pane fade">
+                        <div class="music-session">
+                            <h5>1/16/2018 - Mario Febrizio, Mauricio Morales, Luca Ferrara, Ryan Park-Chan, Jonah Philion</h5>
+                            <div class="card card-body">
+                                <p>Free For All 1</p>
+                                <audio src="2/2-freeForAll1.m4a" controls>
+                            </div>
+                            <div class="card card-body">
+                                <p>Free For All 2</p>
+                                <audio src="2/2-freeForAll2.m4a" controls>
+                            </div>
+                            <div class="card card-body">
+                                <p>Lost</p>
+                                <audio src="2/2-Lost.m4a" controls>
+                            </div>
+                            <div class="card card-body">
+                                <p>Darn That Dream</p>
+                                <audio src="2/2-darnThatDream.m4a" controls>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- third session -->
+                    <div id="third" class="tab-pane fade">
+                        <div class="music-session">
+                            <h5>1/25/2018 - Avery Logan, James Dale, Aditya Raguram, Ryan Park-Chan, Jonah Philion</h5>
+                            <div class="card card-body">
+                                <p>Free For All 1</p>
+                                <audio src="3/3-freeForAll.m4a" controls>
+                            </div>
+                            <div class="card card-body">
+                                <p>Lost</p>
+                                <audio src="3/3-Lost.m4a" controls>
+                            </div>
+                            <div class="card card-body">
+                                <p>Darn That Dream</p>
+                                <audio src="3/3-darnThatDream.m4a" controls>
+                            </div>
+                            <div class="card card-body">
+                                <p>Have You Met Ms. Jones</p>
+                                <audio src="3/3-haveYouMetMsJones.m4a" controls>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a> -->
             </div>
-
-          </div>
         </div>
-      </div>
-    </section>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  </body>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
 
 </html>

@@ -1,8 +1,8 @@
 {
-    "title": "The Big Picture",
-    "name": "startbootstrap-the-big-picture",
+    "title": "Simple Sidebar",
+    "name": "startbootstrap-simple-sidebar",
     "version": "4.0.0",
-    "description": "A full page image background with fixed bottom navigation HTML template built with Bootstrap",
+    "description": "A simple sidbar navigation HTMl template built with Bootstrap",
     "keywords": [
         "css",
         "sass",
@@ -11,9 +11,9 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/the-big-picture",
+    "homepage": "https://startbootstrap.com/template-overviews/simple-sidebar",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-the-big-picture/issues",
+        "url": "https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -23,7 +23,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-the-big-picture.git"
+        "url": "https://github.com/BlackrockDigital/startbootstrap-simple-sidebar.git"
     },
     "dependencies": {
         "bootstrap": "4.0.0",
