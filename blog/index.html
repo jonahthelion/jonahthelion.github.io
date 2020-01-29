@@ -3,9 +3,11 @@ layout: default
 title: ML Riddles
 ---
 
-	<ul class="posts">
+	<center><h2>ML Riddles</h2></center>
+
+	<ul class="list-group">
 
 	  {% for post in site.posts %}
-	    <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> (<span>{{ post.date | date_to_string }}</span>)</li>
+	    <li class="list-group-item"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> (<span>{{ post.date | date_to_string }}</span>)</li>
 	  {% endfor %}
 	</ul>

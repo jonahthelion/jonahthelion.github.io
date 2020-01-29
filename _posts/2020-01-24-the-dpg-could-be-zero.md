@@ -1,14 +1,42 @@
 ---
 layout: post
-title: "The DPG Should Be Zero"
+title: "The DPG Could Be Zero"
 date: 2020-01-24
 puzzle:
 ---
 
-#### Motivation
-"Deep Deterministic Policy Gradient" (DDPG) is an algorithm for efficiently learning deterministic policies in environments with continuous action spaces [(Lillicrap et al, 2016)](https://arxiv.org/abs/1509.02971). When it works, DDPG delivers compelling results. For instance, a cool application of DDPG comes from [Wayve](https://wayve.ai/), an AV startup in London that used DDPG to train a car to drive on curved country roads using only onboard human feedback as a reward signal within minutes [(Kendall et al, 2018)](https://arxiv.org/abs/1807.00412).
+"Deep Deterministic Policy Gradient" [(DDPG)](https://arxiv.org/abs/1509.02971) is generally sold as a fairly environment-agnostic algorithm for efficiently learning deterministic policies in MDPs with continuous action spaces. However, the extent to which the true deterministic policy gradient is useful at all for optimization actually depends strongly on the nature of the reward function that you seek to optimize. I'll show below that when the environment dynamics are deterministic (as in [MuJoCo](http://www.mujoco.org/) for instance), **the policy gradient for discrete reward functions vanishes**.
 
-In general, however, the community appears to believe that it is difficult to get DDPG to work. In Soft Actor Critic [(Haarnoja et al, 2018)](https://arxiv.org/pdf/1801.01290.pdf), the authors blast DDPG:
+<center><h4>Claim</h4></center>
+In a finite-time Markov Decision Process (MDP) with deterministic transition dynamics and a piecewise constant reward function $$r(s, a)$$, the value function $$Q^{\mu_\theta}(s, a)$$ is also piecewise constant for any deterministic policy $$\mu_\theta : \mathcal{S} \rightarrow \mathcal{A}$$, so the [deterministic policy gradient](https://arxiv.org/abs/1509.02971) $$\nabla_\theta J$$ is 0.
+
+$$\nabla_\theta J = \underset{s \sim \rho^\mu}{\mathbb{E}} \left[ \nabla_\theta \mu_\theta(s) \nabla_a Q^{\mu}(s, a) \rvert_{a=\mu_\theta(s)} \right] = 0$$
+
+
+<center><h4>Proof</h4></center>
+Let $$\mathcal{S}_i$$ be the set of states that are $$i$$ steps from terminating under policy $$\mu$$ such that $$\mathcal{S} = \mathcal{S}_1 \cup \mathcal{S}_2 \cup ... \cup \mathcal{S}_n$$. We'll induct on $$i$$.
+
+**Base Case** Consider a terminal state $$s_1 \in \mathcal{S}_1$$. For terminal states, the $$Q$$ function is equal to the reward. Since we assumed the reward function $$r(s,a)$$ is piecewise constant $$\Rightarrow Q(s_1, a)$$ is also piecewise constant.
+
+**Inductive Step** Given that $$Q(s_{i-1}, a)$$ is piecewise constant for all states $$s_{i-1} \in \mathcal{S}_{i-1}$$, we will show that $$Q(s_i, a)$$ is piecewise constant for all $$s_i \in \mathcal{S}_{i}$$. For $$s_i \in \mathcal{S}_i$$, Bellman's equation states
+
+$$ Q^\mu(s_i, a) = \underset{s' \sim T(s_i, a)}{\mathbb{E}} \left[ r(s_i,a) + \gamma \underset{a' \sim \mu(s')}{\mathbb{E}} Q^\mu(s', a') \right].$$
+
+For deterministic transition dynamics and deterministic policies, Bellman's equation reduces to
+
+$$ Q^\mu(s_i, a) = r(s_i,a) + \gamma  Q^\mu(s', \mu(s')) $$
+
+where $$s' = T(s_i, a)$$ so $$s' \in \mathcal{S}_{i-1}$$. Since piecewise constant functions are closed under multiplication and addition, we conclude $$Q^\mu(s_i, a)$$ is piecewise constant.
+
+
+<!-- #### Proof
+"Deep Deterministic Policy Gradient" (DDPG) is generally sold as an algorithm for efficiently learning deterministic policies in MDPs with continuous action spaces. A possibly enlightening observation about the deterministic policy gradient is that it is exactly 0 in a wide range of environments. -->
+
+<!-- "Deep Deterministic Policy Gradient" (DDPG) is an algorithm for efficiently learning deterministic policies in environments with continuous action spaces [(Lillicrap et al, 2016)](https://arxiv.org/abs/1509.02971). When it works, DDPG delivers compelling results. For instance, a cool application of DDPG comes from [Wayve](https://wayve.ai/), an AV startup in London that used DDPG to train a car to drive on curved country roads using only onboard human feedback as a reward signal within minutes [(Kendall et al, 2018)](https://arxiv.org/abs/1807.00412). -->
+
+
+
+<!-- In general, however, the community appears to believe that it is difficult to get DDPG to work. In Soft Actor Critic [(Haarnoja et al, 2018)](https://arxiv.org/pdf/1801.01290.pdf), the authors blast DDPG:
 
 <blockquote class="blockquote">
   <center><p class="mb-0">"...a commonly used algorithm in such settings, deep deterministic policy gradient (DDPG), provides for sample-efficient learning but is notoriously challenging to use due to its extreme brittleness and hyperparameter sensitivity."</p>
@@ -80,4 +108,4 @@ In general, reinforcement learning algorithms are presented in a way that makes 
 
 Part of the reason DDPG still works in those cases is that the neural surrogate for $$Q(s,a)$$ cannot exactly match a step function. As a result, the critic usually has a small gradient pointed towards regions of higher reward.
 
-It's possibly illuminating to count the number of discrete values that $$Q(s,a)$$ can output. From Bellman's equation, we see that $$Q(s,a)$$ produces $$O(n^t)$$ discrete values where $$n$$ is the number of discrete values produced by $$r(s,a)$$ and state $$s$$ is $$t$$ steps from terminating.
+It's possibly illuminating to count the number of discrete values that $$Q(s,a)$$ can output. From Bellman's equation, we see that $$Q(s,a)$$ produces $$O(n^t)$$ discrete values where $$n$$ is the number of discrete values produced by $$r(s,a)$$ and state $$s$$ is $$t$$ steps from terminating. -->
