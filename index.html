@@ -1,270 +1,150 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
+  <head>
 
-<head>
-
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Music</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Other -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <!-- Custom styles for this template -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <title>Jonah Philion</title>
+  </head>
+  <body>
 
-</head>
+    <!-- header -->
+    <!-- <div class='jumbotron' style="background-color:#e6e9ec">
+    <div class="container">
+    <h1 class="text-center">Lift, Splat, Shoot: Encoding Images from Arbitrary Camera Rigs by Implicitly Unprojecting to 3D</h1>
+    <p class='text-center'><a href="https://scholar.google.com/citations?user=VVIAoY0AAAAJ&hl=en" target="_blank">Jonah Philion</a>, <a href="http://www.cs.toronto.edu/~fidler/" target="_blank">Sanja Fidler</a></p>
+    <p class='text-center'>NVIDIA, Vector Institute, University of Toronto</p>
+    <p class='text-center'>ECCV 2020</p>
+    <p class='text-center'><img src='imgs/nusc.gif' class='img-fluid' style='height:250px; border-radius:15px; padding:5px'></p>
+    <!-- <iframe src="https://drive.google.com/file/d/1XwqzDYfzXhky1WNuXTKy7i-jVXgp4hc_/preview" width="640" height="480" autoplay></iframe> -->
+    <!-- <div class="embed-responsive embed-responsive-16by9" style='height:250px; width:444px; margin:auto;'>
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oL5ISk6BnDE?autoplay=1" allowfullscreen></iframe>
+    </div> -->
+    <!-- </div>
+    </div> -->
 
-<body>
+    <div class="container">
 
-    <div id="wrapper">
+      <!-- <p>
+        The goal of perception for autonomous vehicles is to extract semantic representations from multiple sensors and fuse these representations into a single “bird’s-eye-view” coordinate frame for consumption by motion planning. We propose a new end-to-end architecture that directly extracts a bird’s-eye-view representation of a scene given image data from an arbitrary number of cameras. The core idea behind our approach is to “lift” each image individually into a frustum of features for each camera, then “splat” all frustums into a rasterized bird’s-eye- view grid. By training on the entire camera rig, we provide evidence that our model is able to learn not only how to represent images but how to fuse predictions from all cameras into a single cohesive representation of the scene while being robust to calibration error. On standard bird’s- eye-view tasks such as object segmentation and map segmentation, our model outperforms all baselines and prior work. In pursuit of the goal of learning dense representations for motion planning, we show that the representations inferred by our model enable interpretable end-to-end motion planning by “shooting” template trajectories into a bird’s-eye-view cost map output by our network. We benchmark our approach against models that use oracle depth from lidar.
+      </p>
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
+    <hr/> -->
+
+    <!-- <span class="border border-white">
+    <h4 class="text-center">News</h4>
+    <ul>
+      <li>[October 2020] code release on <a href='https://github.com/nv-tlabs/lift-splat-shoot' target="_blank">github</a></li>
+      <li>[August 2020] paper released on <a href='https://arxiv.org/abs/2008.05711' target="_blank">arxiv</a></li>
+    </ul>
+    </span>
+
+    <hr/> -->
+
+    <span class="border border-white">
+      <!-- <h4 class="text-center">Paper</h4> -->
+      <div class='row'>
+        <div class='col-sm-4'>
+          <img src='Philion.jpg' class='img-fluid float-right' style='height:220px; border: solid; border-width: thin; border-radius:30px; border-color:#000000;'>
         </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <h1>Some Music</h1>
-
-                <ul class="nav nav-tabs">
-                  <li class="nav-item active">
-                    <a data-toggle="tab" class="nav-link active" href="#first">Reshearsal 1</a>
-                  </li>
-                  <li class="nav-item">
-                    <a data-toggle="tab" class="nav-link" href="#second">Rehearsal 2</a>
-                  </li>
-                  <li class="nav-item">
-                    <a data-toggle="tab" class="nav-link" href="#third">Rehearsal 3</a>
-                  </li>
-                  <li class="nav-item">
-                    <a data-toggle="tab" class="nav-link" href="#fourth">Rehearsal 4</a>
-                  </li>
-                  <li class="nav-item">
-                    <a data-toggle="tab" class="nav-link" href="#fifth">Rehearsal 5</a>
-                  </li>
-                  <li class="nav-item">
-                    <a data-toggle="tab" class="nav-link" href="#sixth">Rehearsal 6</a>
-                  </li>
-                  <li class="nav-item">
-                    <a data-toggle="tab" class="nav-link" href="#wallys1">Wally's 1</a>
-                  </li>
-                  <li class="nav-item">
-                    <a data-toggle="tab" class="nav-link" href="#maxryanjonah">Max-Ryan-Jonah</a>
-                  </li>
-                  <li class="nav-item">
-                    <a data-toggle="tab" class="nav-link" href="#wallys2">Wally's 2</a>
-                  </li>
-                </ul>
-
-                <div class="tab-content">
-                    <!-- first session -->
-                    <div id="first" class="tab-pane fade-in active">
-                        <div class="music-session">
-                            <h5>1/15/2018 - Mario Fabrizio, Seajun Kwon, Aditya Raguram, Ryan Park-Chan, Jonah Philion</h5>
-                            <div class="card card-body">
-                                <p>Free For All 1</p>
-                                <audio src="1/1-freeForAll1.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Free For All 2</p>
-                                <audio src="1/1-freeForAll2.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Darn That Dream</p>
-                                <audio src="1/1-darnThatDream.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Blue Train</p>
-                                <audio src="1/1-blueTrain.m4a" controls>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- second session -->
-                    <div id="second" class="tab-pane fade">
-                        <div class="music-session">
-                            <h5>1/16/2018 - Mario Fabrizio, Mauricio Morales, Luca Ferrara, Ryan Park-Chan, Jonah Philion</h5>
-                            <div class="card card-body">
-                                <p>Free For All 1</p>
-                                <audio src="2/2-freeForAll1.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Free For All 2</p>
-                                <audio src="2/2-freeForAll2.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Lost</p>
-                                <audio src="2/2-Lost.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Darn That Dream</p>
-                                <audio src="2/2-darnThatDream.m4a" controls>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- third session -->
-                    <div id="third" class="tab-pane fade">
-                        <div class="music-session">
-                            <h5>1/25/2018 - Avery Logan, James Dale, Aditya Raguram, Ryan Park-Chan, Jonah Philion</h5>
-                            <div class="card card-body">
-                                <p>Free For All 1</p>
-                                <audio src="3/3-freeForAll.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Lost</p>
-                                <audio src="3/3-Lost.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Darn That Dream</p>
-                                <audio src="3/3-darnThatDream.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Have You Met Ms. Jones</p>
-                                <audio src="3/3-haveYouMetMsJones.m4a" controls>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- fourth session -->
-                    <div id="fourth" class="tab-pane fade">
-                        <div class="music-session">
-                            <h5>2/3/2018 - Mario Fabrizio, James Dale, Aditya Raguram, Ryan Park-Chan, Jonah Philion</h5>
-                            <div class="card card-body">
-                                <p>Free For All 1</p>
-                                <audio src="4/4-freeForAll1.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Free For All 2</p>
-                                <audio src="4/4-freeForAll2.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Lost</p>
-                                <audio src="4/4-Lost.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>E Minor Untitled 1</p>
-                                <audio src="4/4-eMinorUntitled1.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Free For All 3</p>
-                                <audio src="4/4-freeForAll3.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>E Minor Untitled 2</p>
-                                <audio src="4/4-eMinorUntitled2.m4a" controls>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- fifth session -->
-                    <div id="fifth" class="tab-pane fade">
-                        <div class="music-session">
-                            <h5>2/11/2018 - Mario Fabrizio, Andrew Boudreau, James Dale, Ryan Park-Chan, Jonah Philion</h5>
-                            <div class="card card-body">
-                                <p>Have You Met Ms. Jones (5:50-16:20), Yes or No (21:00-31:20)</p>
-                                <audio src="5/Part 1.m4a" controls>
-                            </div>
-                            <div class="card card-body">
-                                <p>Lost (2:50-11:50)</p>
-                                <audio src="5/Bun 2.m4a" controls>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- sixth session -->
-                    <div id="sixth" class="tab-pane fade">
-                        <div class="music-session">
-                            <h5>2/18/2018 - Avery Logan, Chris Mondak, Ryan Park-Chan, Jonah Philion</h5>
-                        </div>
-                    </div>
-
-                    <!-- Wally's -->
-                    <div id="wallys1" class="tab-pane fade">
-                        <div class="music-session">
-                            <h5>2/24/2018 - Avery Logan, Chris Mondak, Ryan Park-Chan, Jonah Philion</h5>
-                            <div class="card card-body">
-                                <p>Free For All, Sophisticated Lady, There Will Never Be Another You, Lost</p>
-                                <audio src="Wallys1/WALLYS.mp3.m4a" controls>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Max-Ryan-Jonah -->
-                    <div id="maxryanjonah" class="tab-pane fade">
-                        <div class="music-session">
-                            <h5>4/18/2018 - Max Lesser, Ryan Park-Chan, Jonah Philion (4:10)</h5>
-                            <div class="card card-body">
-                                <p>Trio</p>
-                                <audio src="maxryanjonah/maxryanjonah.m4a" controls>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Wally's 2 -->
-                    <div id="wallys2" class="tab-pane fade">
-                        <div class="music-session">
-                            <h5>7/7/2018 - Avery Logan, Chris Mondak, Ryan Park-Chan, Jonah Philion</h5>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <!-- <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a> -->
-            </div>
+        <div class='col'>
+          <h5 class="card-title text-center">Jonah Philion</h5>
+          <p class="card-text">I'm a PhD student at University of Toronto working on machine learning and computer vision, primarily with applications to self-driving. I'm advised by <a href=https://www.cs.utoronto.ca/~fidler/>Sanja Fidler</a>. I'm also a part-time research scientist at <a href=https://www.nvidia.com/en-us/research/>NVIDIA</a>.</p>
+          <p class='card-text'>
+              Before coming to University of Toronto, I worked for a year on the perception team at <a href='https://www.isee.ai/'>ISEE</a>. I did my undergrad at Harvard University where I studied Physics and Math and minored in computer science. During college, I was also part of the <a href=https://college.harvard.edu/academics/liberal-arts-sciences/dual-degree-music-programs>Harvard/NEC program</a> for jazz performance (alto saxophone).
+          </p>
+          <p class='text-center'>
+            <a href=https://twitter.com/PhilionJonah>Twitter</a> / <a href=https://github.com/jonahthelion>Github</a> / <a href='./jonah_philion_cv.pdf'>CV</a>
+          </p>
         </div>
-        <!-- /#page-content-wrapper -->
+      </div>
+    </span>
 
+    <hr/>
+    <h4 class='text-center'>Research</h4>
+
+
+    <span class="border border-white">
+    <div class='row'>
+        <div class='col-sm-4'>
+        <img src='Philion.jpg' class='img-fluid float-right' style='height:120px; border: solid; border-width: thin; border-radius:30px; border-color:#000000;'>
+        </div>
+        <div class='col-sm-6'>
+        <p class="card-text">Learning Indoor Inverse Rendering with 3D Spatially-Varying Lighting<br>
+            Zian Wang, Jonah Philion, Sanja Fidler, Jan Kautz
+        <br>ICCV 2021 (oral)</p>
+
+        <p>project page / arXiv / video / code / bibtex</p>
+        </div>
     </div>
-    <!-- /#wrapper -->
+    </span>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+    <span class="border border-white">
+    <div class='row'>
+        <div class='col-sm-4'>
+        <img src='Philion.jpg' class='img-fluid float-right' style='height:120px; border: solid; border-width: thin; border-radius:30px; border-color:#000000;'>
+        </div>
+        <div class='col-sm-6'>
+        <p class="card-text">DriveGAN: Towards a Controllable High-Quality Neural Simulation<br>
+            Seung Wook Kim, Jonah Philion, Antonio Torralba, Sanja Fidler
+        <br>CVPR 2021 (oral)</p>
 
-</body>
+        <p>project page / arXiv / video / code / bibtex</p>
+        </div>
+    </div>
+    </span>
 
+
+    <span class="border border-white">
+    <div class='row'>
+        <div class='col-sm-4'>
+        <img src='Philion.jpg' class='img-fluid float-right' style='height:120px; border: solid; border-width: thin; border-radius:30px; border-color:#000000;'>
+        </div>
+        <div class='col-sm-6'>
+        <p class="card-text">Emergent Road Rules In Multi-Agent Driving Environments<br>
+            Avik Pal, Jonah Philion, Yuan-Hong Liao, Sanja Fidler
+        <br>ICLR 2020</p>
+
+        <p>project page / arXiv / video / code / bibtex</p>
+        </div>
+    </div>
+    </span>
+
+
+    <span class="border border-white">
+    <div class='row'>
+        <div class='col-sm-4'>
+        <img src='Philion.jpg' class='img-fluid float-right' style='height:120px; border: solid; border-width: thin; border-radius:30px; border-color:#000000;'>
+        </div>
+        <div class='col-sm-6'>
+        <p class="card-text">The Efficacy of Neural Planning Metrics: A Meta-Analysis of PKL on nuScenes<br>
+            Yiluan Guo, Holger Caesar, Oscar Beijbom, Jonah Philion, Sanja Fidler
+        <br>IROS 2020 Workshop on Benchmarking Progress in Autonomous Driving</p>
+
+        <p>project page / arXiv / video / code / bibtex</p>
+        </div>
+    </div>
+    </span>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
