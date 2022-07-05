@@ -1,0 +1,6 @@
+@inproceedings{rempe2022strive,
+    author={Rempe, Davis and Philion, Jonah and Guibas, Leonidas J. and Fidler, Sanja and Litany, Or},
+    title={Generating Useful Accident-Prone Driving Scenarios via a Learned Traffic Prior},
+    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2022}
+}

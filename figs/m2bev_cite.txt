@@ -1,0 +1,7 @@
+@article{xie2022m,
+      title={M\^{} 2BEV: Multi-Camera Joint 3D Detection and Segmentation with Unified Birds-Eye View Representation},
+      author={Xie, Enze and Yu, Zhiding and Zhou, Daquan and Philion, Jonah and Anandkumar, Anima and Fidler, Sanja and Luo, Ping and Alvarez, Jose M},
+      journal={arXiv preprint arXiv:2204.05088},
+      year={2022}
+    }
+  }
